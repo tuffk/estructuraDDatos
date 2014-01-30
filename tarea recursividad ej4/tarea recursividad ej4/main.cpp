@@ -23,9 +23,9 @@ int cont;
 void kuz(){
 
 	if(I < n){
-	if(J < n){
+	if(J-1 < n-1){
 
-		if( n-J <=I){
+		if( n-J-1 <=I){
 		cont++;
 		a[I][J] = cont;
 		}
