@@ -14,6 +14,7 @@ correspondiente.
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
+#include <algorithm> 
 
 using namespace std;
 
@@ -22,6 +23,7 @@ using namespace std;
 int funcion(string c,ifstream &a){ 
 	int o=0,p=1;
 	string l; 
+	
 
 	while(getline(a,l)){ 
 		if(l.find(c)!=string::npos){ 
@@ -33,7 +35,7 @@ int funcion(string c,ifstream &a){
 	a.close(); 
 	return o;
 } 
-
+/*
 bool CheckWord(char* filename, char* search)
 {
 
@@ -42,7 +44,7 @@ bool CheckWord(char* filename, char* search)
     int offset; 
     string line;
     ifstream Myfile;
-    Myfile.open (filename);
+    Myfile.open ("pruebas.txt");
 
     if(Myfile.is_open())
     {
@@ -68,7 +70,7 @@ bool CheckWord(char* filename, char* search)
 
     return false;
 }
-
+*/
 /*
 int main () 
 {
@@ -78,11 +80,17 @@ int main ()
     return 0;
 }
 */
+
 int main() { 
 	 string c = "hola";
 
-	 CheckWord("pruebas.txt", "hola");
-	 cout <<"PEN"<<endl;
+	int offset; 
+    string line;
+    ifstream Myfile;
+    Myfile.open ("pruebas.txt");
+	
+	cout <<funcion(c,Myfile) << endl;
+	
 
 
 FILE * pFile;
